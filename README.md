@@ -146,8 +146,8 @@ DOM rendering is handled through a controlled render function to avoid duplicate
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here]()
+- Live Site URL: [Add live site URL here](https://smartee-17.github.io/Notification-frontend-challenge/notifications-page-main/)
 
 ## 💡 Author
 
