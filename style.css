@@ -1,0 +1,382 @@
+
+@font-face {
+  font-family: 'PlusJakartaSans Medium';
+  src: url(assets/fonts/static/PlusJakartaSans-Medium.ttf)
+  format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PlusJakartaSans ExtraBold';
+  src: url(assets/fonts/static/PlusJakartaSans-ExtraBold.ttf)
+  format('truetype');
+  font-display: swap;
+}
+
+@layer base, responsive, components, utilities;
+
+@layer base{
+  *,
+  *::before,
+  *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 100vh;
+
+    font-family: var(--ff-medium);
+    font-size: var(--font-xs);
+    
+    color: var(--Gray-500);
+    background-color: var(--Navy-50);
+  }
+
+  main{
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+
+    width: var(--main-width);
+    border-radius: var(--radius-2);
+    margin: var(--main-margin);
+
+    background-color: var(--White);
+    box-shadow: var(--shadow-4);
+  }
+
+}
+
+@layer responsive{
+
+:root {
+  /* Colors */
+
+  /* Primary */
+  --Red-500: hsl(1, 90%, 64%);
+  --Blue-950: hsl(219, 85%, 26%);
+
+  /* Neutral */
+  --White: hsl(0, 100%, 100%);
+  --Navy-50: hsl(210, 60%, 98%);
+  --Blue-100: hsl(211, 68%, 94%);
+  --Navy-100: hsl(205, 33%, 90%);
+  --Gray-500: hsl(219, 14%, 63%);
+  --Gray-600: hsl(219, 12%, 42%);
+  --Navy-950: hsl(224, 21%, 14%);
+
+    /* ========= SPACING (8pt → rem) ========= */
+    --space-0: 0rem;
+    --space-00: 0.125rem;     
+    --space-1: 0.25rem;   
+    --space-2: 0.5rem;    
+    --space-3: 1rem;    
+    --space-4: 1.5rem;     
+    --space-5: 2rem;       
+    --space-6: 2.5rem;    
+
+      /* main  */
+    --main-width: 100vw;
+    --main-margin: 0em;
+
+  /* ========= TYPOGRAPHY (Fluid: base + 1vw) ========= */
+  --font-xxxs: calc(0.60em + 0.8vw);  
+  --font-xxs:  calc(0.70em + 1vw);
+  --font-xs: calc(0.75em + 1vw);
+
+
+  --ff-medium: 'PlusJakartaSans Medium', sans-serif;
+  --ff-ExtraBold: 'PlusJakartaSans ExtraBold', sans-serif;
+  
+
+    /* ========= BORDER RADIUS SYSTEM ========= */
+  --radius-1: 0.25em; 
+  --radius-2: 0.5em;   
+  --radius-3: 1em;      
+  --radius-round: 9999px;
+
+    /* ========= SHADOW SYSTEM ========= */
+  --shadow-1: 0 1px 2px rgba(0,0,0,0.08);
+  --shadow-2: 0 2px 4px rgba(0,0,0,0.10);
+  --shadow-3: 0 4px 8px rgba(0,0,0,0.12);
+  --shadow-4: 0 8px 16px rgba(0,0,0,0.14);
+
+    /* ========= BREAKPOINTS ========= */
+  --bp-tablet: 600px;
+  --bp-desktop: 1024px;
+
+  
+  /* ========= MOTION ========= */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: 150ms var(--ease);
+  --transition-medium: 250ms var(--ease);
+  --transition-slow: 400ms var(--ease);
+}
+
+@media (max-width: 300px) {
+  :root{
+    --main-width: 100%;
+
+    /* Typography */
+  --font-xxxs: calc(0.60em + 0.2vw);  
+  --font-xxs:  calc(0.70em + 0.2vw);
+  --font-xs: calc(0.75em + 0.2vw);
+
+  /* Spacing */
+      --space-0: 0em;
+    --space-00: 0.125em;         /* 0px  */
+    --space-1: 0.25em;     /* 4px  */
+    --space-2: 0.5em;      /* 8px  */
+    --space-3: 1em;        /* 16px */
+    --space-4: 1.5em;      /* 24px */
+    --space-5: 2em;        /* 32px */
+    --space-6: 2.5em;      /* 40px */
+  }
+}
+
+@media (min-width: 600px) {
+  :root {
+    --space-0: 0rem;
+    --space-00: calc(0.125rem * 1.1);
+    --space-1: calc(0.25rem * 1.1);
+    --space-2: calc(0.5rem * 1.1);
+    --space-3: calc(1rem * 1.1);
+    --space-4: calc(1.5rem * 1.1);
+    --space-5: calc(2rem * 1.1);
+    --space-6: calc(2.5rem * 1.1);
+
+
+
+    /* main  */
+    --main-width: 80vw;
+    --main-margin: var(--space-5);
+
+    /* 8pt font size system - Tablet */
+    --font-xxxs: calc((0.60em) + 1vw);
+    --font-xxs:  calc((0.70em) + 1vw);
+    --font-xs: calc((0.75em) + 1vw);
+
+    /* ========= BORDER RADIUS SYSTEM ========= */
+    --radius-1: calc(0.25em * 1.1);
+    --radius-2: calc(0.5em * 1.1);
+    --radius-3: calc(1em * 1.1);
+  }
+}
+
+
+@media (min-width: 1024px) {
+  :root {
+      /* 8pt grid spacing system - large Screen */
+    --space-0: 0rem;
+    --space-00: calc(0.125rem * 1.25);
+    --space-1: calc(0.25rem * 1.25);
+    --space-2: calc(0.5rem * 1.25);
+    --space-3: calc(1rem * 1.25);
+    --space-4: calc(1.5rem * 1.25);
+    --space-5: calc(2rem * 1.25);
+    --space-6: calc(2.5rem * 1.25);
+    --space-7: calc(3rem * 1.25);
+    --space-8: calc(3.5rem * 1.25);
+    --space-9: calc(4rem * 1.25);
+
+    /* main  */
+    --main-width: 50vw;
+    --main-margin: var(--space-5);
+
+     /* 8pt font size system - Tablet */
+    --font-xxxs: calc(0.60em + 0.5vw);
+    --font-xxs:  calc(0.70em + 0.5vw);
+    --font-xs: calc(0.75em  + 0.5vw);
+
+
+    /* ========= BORDER RADIUS SYSTEM ========= */
+    --radius-1: calc(0.25em * 1.25);
+    --radius-2: calc(0.5em * 1.25);
+    --radius-3: calc(1em * 1.25);   
+  }
+}
+
+}
+
+@layer components{
+  /* header */
+  header{
+    align-items: center;
+    justify-content: space-between;
+
+    margin: var(--space-2) var(--space-4);
+
+    font-size: var(--font-xxxs);
+  }
+
+  header h1{
+    align-items: center;
+
+    color: var(--Navy-950);
+  }
+
+  .h1-span{
+    padding: var(--space-0) var(--space-2);
+    margin-left: var(--space-2);
+    border-radius: var(--radius-1);
+
+    font-size: var(--font-xxxs);
+    text-align: center;
+
+    background-color: var(--Blue-950);
+    color: var(--White);
+  }
+  
+
+  /* Article */
+  article{
+    gap: var(--space-3);
+
+    margin: var(--space-0) var(--space-4);
+  }
+
+  .wrapper{
+    align-items: center;
+    gap: var(--space-2);
+
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-1);
+
+    font-size: var(--font-xxxs);
+
+    box-shadow: var(--shadow-2);
+  }
+  
+  .unread-bg-color{
+      background-color: var(--Navy-50);
+  }
+
+  .profile-image{
+    width: var(--space-6);
+  }
+
+  .desc-p{
+    margin-bottom: var(--space-2);
+
+    color: var(--Gray-600);
+  }
+
+  .name{
+    font-size: var(--font-xs);
+    font-weight: 900;
+
+    color: var(--Navy-950);
+  }
+
+  .msg{
+    font-weight: 600;
+    color: var(--Gray-600);
+  }
+
+  .club-msg{
+    font-weight: 600;
+    color: var(--Gray-600);
+  }
+
+  .long-msg > :nth-child(1){
+    align-self: flex-start;
+  }
+
+  .recieve-msg{
+    grid-column: 1 / span 2;
+
+    padding: var(--space-2);
+    border: 1px solid var(--Gray-500);
+    border-radius: var(--radius-1);
+
+    font-size: var(--font-xs);
+    line-height: 1.2;
+
+    color: var(--Gray-600);
+    transition: background-color var(--transition-medium)
+    border var(--transition-medium);
+  }
+
+  .recieve-msg:hover{
+    background-color: var(--Blue-100);
+    border: none;
+  }
+
+  .image-msg{
+    width: var(--space-6);
+
+    transition: border var(--transition-medium)
+                border-radius var(--transition-medium);
+  }
+
+  .image-msg:hover{
+    border: 3px solid var(--Gray-500);
+    border-radius: var(--radius-2);
+  }
+  .unread{
+    display: inline-flex;
+
+    padding: var(--space-1);
+    border-radius: var(--radius-round);
+
+    background-color: var(--Red-500);
+  }
+  .period{
+    margin-bottom: var(--space-2);
+  }
+
+  /* Attribution */
+  .attribution { 
+    font-size: var(--font-xxxs); 
+    text-align: center; 
+    padding: var(--space-3);
+  }
+  .attribution a { 
+      color: hsl(228, 45%, 44%); 
+  }
+}
+
+@layer utilities {
+  .flex-row{
+    display: flex;
+  }
+
+  .flex-column{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cursor{
+    cursor: pointer;
+  }
+
+  .margin-p{
+    margin-right: var(--space-2);
+  }
+
+  .hover:hover{
+    color: var(--Blue-950);
+    font-weight: 600;
+  }
+
+  .transition{
+    transition: color var(--transition-medium);
+  }
+
+  .hidden{
+    display: none;
+  }
+
+  
+  .read{
+    background-color: var(--White);
+    box-shadow: none;
+  }
+
+}
