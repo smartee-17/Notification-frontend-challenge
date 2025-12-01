@@ -10,7 +10,7 @@ This is a solution to the [Notifications page challenge on Frontend Mentor](http
 - [Features](#🚀-features)
 - [Technologies used](#🧩-technologies-used)
 - [How it works](#what-i-learned)
-- [Futture Improvement](#📌-future-improvements)
+- [Future Improvement](#📌-future-improvements)
 - [Links](#links)
 - [Author](#💡-author)
 - [Acknowledgments](#🙏-acknowledgements)
@@ -146,16 +146,16 @@ DOM rendering is handled through a controlled render function to avoid duplicate
 
 ### Links
 
-- Solution URL: [Add solution URL here]()
-- Live Site URL: [Add live site URL here](https://smartee-17.github.io/Notification-frontend-challenge/notifications-page-main/)
+- Solution URL: [Solution URL](https://www.frontendmentor.io/solutions/responsive-and-interactive-notification-component-Gy9aE3Orxl)
+- Live Site URL: [Live Demo](https://smartee-17.github.io/Notification-frontend-challenge/notifications-page-main/)
 
 ## 💡 Author
 
 *** Smartee-17 ***
 A front-end developer learning advanced JavaScript and building UI projects.
 
-- Frontend Mentor - [Smartee-17](https://www.frontendmentor.io/profile/yourusername)
-- Github - [Smartee-17](https://www.twitter.com/yourusername)
+- Frontend Mentor - [Zizi](https://www.frontendmentor.io/profile/smartee-17)
+- Github - [Smartee-17](https://github.com/smartee-17)
 
 
 ## 🙏 Acknowledgements
