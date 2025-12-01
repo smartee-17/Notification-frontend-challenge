@@ -152,7 +152,7 @@ DOM rendering is handled through a controlled render function to avoid duplicate
 ## 💡 Author
 
 *** Smartee-17 ***
-A front-end developer learning advanced JavaScript and building UI projects.
+A developer learning advanced JavaScript and building UI projects.
 
 - Frontend Mentor - [Zizi](https://www.frontendmentor.io/profile/smartee-17)
 - Github - [Smartee-17](https://github.com/smartee-17)
